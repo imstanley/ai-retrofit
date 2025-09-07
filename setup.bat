@@ -27,8 +27,8 @@ echo ✅ Dependencies installed successfully
 REM Create environment files if they don't exist
 echo 🔧 Setting up environment files...
 
-if not exist "web\.env.local" (
-    echo Creating web\.env.local...
+if not exist "apps\web\.env.local" (
+    echo Creating apps\web\.env.local...
     (
         echo # Supabase Configuration
         echo NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
@@ -37,14 +37,14 @@ if not exist "web\.env.local" (
         echo.
         echo # API Configuration
         echo NEXT_PUBLIC_API_URL=http://localhost:3000
-    ) > web\.env.local
-    echo ✅ Created web\.env.local
+    ) > apps\web\.env.local
+    echo ✅ Created apps\web\.env.local
 ) else (
-    echo ✅ web\.env.local already exists
+    echo ✅ apps\web\.env.local already exists
 )
 
-if not exist "mobile\.env" (
-    echo Creating mobile\.env...
+if not exist "apps\mobile\.env" (
+    echo Creating apps\mobile\.env...
     (
         echo # Supabase Configuration
         echo EXPO_PUBLIC_SUPABASE_URL=your_supabase_project_url
@@ -52,10 +52,10 @@ if not exist "mobile\.env" (
         echo.
         echo # API Configuration
         echo EXPO_PUBLIC_API_URL=http://localhost:3000
-    ) > mobile\.env
-    echo ✅ Created mobile\.env
+    ) > apps\mobile\.env
+    echo ✅ Created apps\mobile\.env
 ) else (
-    echo ✅ mobile\.env already exists
+    echo ✅ apps\mobile\.env already exists
 )
 
 echo.

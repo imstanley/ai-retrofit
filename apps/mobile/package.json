@@ -10,7 +10,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@ai-retrofit/shared": "workspace:*",
+    "@ai-retrofit/shared": "*",
     "@supabase/supabase-js": "^2.57.2",
     "expo": "~53.0.22",
     "expo-status-bar": "~2.2.3",
